@@ -3,7 +3,7 @@ defaults:
     scope:
       path: ""
     values:
-      layout: "my-site"
+      layout: "default"
       author: "rpc1999"
   -
     scope:
