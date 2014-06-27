@@ -1,0 +1,17 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      author: "rpc1999"
+      
+  -
+    scope:
+      path: "about/blog"
+      type: "post"
+    values:
+      layout: "meta-blog"
+      author: "人文爱乐合唱团"
+
+

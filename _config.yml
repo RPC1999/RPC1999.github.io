@@ -1,3 +1,5 @@
+name: "rpc"
+
 defaults:
   -
     scope:
@@ -5,6 +7,7 @@ defaults:
     values:
       layout: "default"
       author: "rpc1999"
+      
   -
     scope:
       path: "about/blog"

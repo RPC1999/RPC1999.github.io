@@ -1,15 +1,10 @@
 ---
 
 title: Hello, Wrold!
+layout: default
 
 ---
 
-#Hello world
+{% for post in site.posts limit: 10 %}
 
-world
-
----
-
-> power
-
-
+{% endfor %}
