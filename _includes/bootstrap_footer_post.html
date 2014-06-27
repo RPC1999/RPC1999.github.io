@@ -1,0 +1,30 @@
+ 
+        </div>
+        <div class="col-md-3">
+
+
+          <h3>
+            <small>最近文章</small>
+          </h3>
+          <table class="table">
+            {% for post in site.posts limit: 5 %}
+            <tr>
+              <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+              <td>{{ post.date | date: "%m-%d-%Y" }}</td> 
+            </tr>
+            {% endfor %}
+          </table>
+
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
