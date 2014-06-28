@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ,maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -14,16 +14,61 @@
 
     <!-- Custom styles for this template -->
     <style type="text/css">
+      body{
+      	overflow: hidden;
+      }
+      .rpc-pages{
+      }
       .rpc-page{
+      	position: relative;
+      	padding: 0 0 0 0;
+      	margin: 0 0 0 0;
       	width: 100%;
       	height: 100%;
+        display:inline-block;
+        *display:inline;zoom:1;
+        margin:0px;outline:none;
+        vertical-align: top;
+      }
+      .yellow-page{
+      	background-color: #f8f7f5;
+      }
+      .darkgray-page{
+      	background-color: #555;
+      	color: #f8f7f5;
+      	text-align: center;
+      	font-size: 2.5em;
+      	margin-top: auto;
+      	margin-bottom: auto;
+      }
+      .darkgray-page a{
+      	color: #f8f7f5;
       }
       #welcome-image{
       	position: relative;
       	margin-left: auto;
       	margin-right: auto;
+      	margin-top: auto;
+      	margin-bottom: auto;
       	top: 0px;
       	left: 0px;
+      }
+      .page-wrapper{
+      	display: table;
+      	width: 100%;
+      	height: 100%;
+      	min-height: 100%;
+      }
+      .page-wrapper-inner{
+      	display: table-cell;
+      	vertical-align: middle;
+      }
+      .cover-container{
+      	margin-right: auto;
+      	margin-left: auto;
+      }
+      .cover-inner{
+      	padding: 30px;
       }
     </style>
     <script>
@@ -45,19 +90,21 @@
       	//alert(top);
 
       	var img = document.getElementById("welcome-image");
-        alert("good1");
+        //alert("good1");
       	img.width = ans;
       	img.height = ans;
       	img.style.left = left + "px";
       	img.style.top = top + "px";
-      	alert("good2");
+      	//alert("good2");
 
+        
       	var pages = document.querySelectorAll(".rpc-page");
-      	for (var i = 0, var j = pages.length ; i < j ; i ++ ){
+      	for (var i = 0 ; i < pages.length ; i ++ ){
+      		//var t = pages[i];
       		pages[i].style.height = height + "px";
       		pages[i].style.width = width + "px";
       	}
-      	alert("good3");
+      	//alert("good3 " + pages.length);
       }
     </script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -72,14 +119,37 @@
 
   <body onload="window.addEventListener('resize', getProperSize, false);">
 
-    <div class="rpc-page">
+  <div class="rpc-pages">
+    <div class="rpc-page yellow-page">
        <img id="welcome-image" width = "600px" height="600px" src="images/web_welcome_new.png" onload="getProperSize();" />
     </div>
-    <div class="rpc-page">
-      <h1>
-        power
-      </h1>
+    <div class="rpc-page darkgray-page">
+
+      <div class="page-wrapper">
+        <div class="page-wrapper-inner">
+          <div class="page-container">
+          	<div class="cover-inner">
+
+          	  <h1><a href="/menu.html">内容目录</a></h1>
+          	  <h1><a href="#">关于我们</a></h1>
+          	  <!--<ul>
+          	    <li>
+          	      <a href="index.html">内容目录</a>
+          	    </li>
+          	    <li>
+          	      <a href="#">分类导航</a>
+          	    </li>
+          	    <li>
+          	      <a href="#">关于我们</a>
+          	    </li>
+          	  </ul>-->
+          	</div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>  
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
