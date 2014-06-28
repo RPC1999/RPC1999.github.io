@@ -1,7 +1,7 @@
 ---
 
-title: Hello, Wrold!
-layout: default
+title: Hello, World!
+layout: post
 
 ---
 
