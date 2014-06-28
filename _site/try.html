@@ -14,15 +14,52 @@
 
     <!-- Custom styles for this template -->
     <style type="text/css">
-      body {
-          padding-top: 50px;
-        }
-        .starter-template {
-          padding: 40px 15px;
-          text-align: center;
-        }
+      .rpc-page{
+      	width: 100%;
+      	height: 100%;
+      }
+      #welcome-image{
+      	position: relative;
+      	margin-left: auto;
+      	margin-right: auto;
+      	top: 0px;
+      	left: 0px;
+      }
     </style>
+    <script>
+      function getProperSize(){
+      	var height = window.innerHeight;
+      	var width = window.innerWidth;
+      	var ans = width;
+      	var top = 0;
+      	var left = 0;
+      	if( height < width ){
+      		ans = height;
+      		left = (width - height) / 2;
+      	}else {
+      		ans = width;
+      		top = (height - width) / 2;
+      	}
+      	//alert(ans);
+      	//alert(left);
+      	//alert(top);
 
+      	var img = document.getElementById("welcome-image");
+        alert("good1");
+      	img.width = ans;
+      	img.height = ans;
+      	img.style.left = left + "px";
+      	img.style.top = top + "px";
+      	alert("good2");
+
+      	var pages = document.querySelectorAll(".rpc-page");
+      	for (var i = 0, var j = pages.length ; i < j ; i ++ ){
+      		pages[i].style.height = height + "px";
+      		pages[i].style.width = width + "px";
+      	}
+      	alert("good3");
+      }
+    </script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -33,134 +70,16 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="window.addEventListener('resize', getProperSize, false);">
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+    <div class="rpc-page">
+       <img id="welcome-image" width = "600px" height="600px" src="images/web_welcome_new.png" onload="getProperSize();" />
     </div>
-
-    
-
-    <div class="container">
-      <!-- Example row of columns -->
-
-      <div class="row">
-        <!--<div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <h2>Heading</h2>
-<hr style="font-family:宋体;" />
-<p style="font-family:宋体;">
-    <span style="font-size:medium;orphans:2;widows:2;">　　<span style="color:#3f3f3f;">普塞尔让这首作品充满了悔恨和悲伤，其中不和谐的延留音和先现音就如同痛苦的哭泣一般</span></span>
-</p>
-<hr style="font-family:宋体;" />
-<p style="font-family:宋体;text-align:center;">
-    <strong><span style="font-size:24px;"><br />
-        </span></strong>
-</p>
-<p style="font-family:宋体;text-align:center;">
-    <strong><span style="font-size:24px;">Hear my prayer</span></strong>
-</p>
-<p style="font-family:宋体;text-align:center;">
-    <span style="color:#595959;">mark</span><br />
-</p>
-<p style="font-family:宋体;">
-    <br />
-    <span style="font-size:medium;orphans:2;widows:2;"></span>
-</p>
-<p style="font-size:medium;text-align:-webkit-auto;orphans:2;widows:2;">
-    　　这是亨利·普塞尔（HenryPurcell，1659-1695）根据赞美诗（《诗篇》）第102章第一节创作的合唱作品。原文是“Hear my prayer, O LORD, and let my cry come unto thee”。我们知之甚少，他唯一流传下来完整的赞美诗，只有这一节。1685年，在查理二世的葬礼上，威斯敏斯特教堂合唱团演唱了这首作品。很可能就是在那一年，这个作品为人所知，最终让它保留了下来。虽然只有一节，但是作品本身是完整的。钦定版圣经（King James Version of the Bible，简称KJV），如果你翻到诗篇第102章，那么你就能看到：
-</p>
-<p style="font-size:medium;text-align:-webkit-auto;orphans:2;widows:2;">
-    <br />
-</p>
-<p>
-    <span style="font-size:14px;color:#595959;">痛苦的哭泣</span>
-</p>
-<p>
-    <span style="font-size:14px;color:#595959;">A Cry in Distress</span>
-</p>
-<p>
-    <span style="font-size:14px;color:#595959;">困苦人发昏的时候，在耶和华面前吐露苦情的祷告</span>
-</p>
-<p style="font-size:medium;text-align:-webkit-auto;orphans:2;widows:2;">
-    <span style="font-size:14px;color:#595959;">A Prayer of the afflicted, when he is overwhelmed, and poureth out his complaint before the LORD.</span>
-</p>
-<p style="font-size:medium;text-align:-webkit-auto;orphans:2;widows:2;">
-    <br />
-</p>
-<p>
-    　　普塞尔让这首作品充满了悔恨和悲伤，其中不和谐的延留音和先现音就如同痛苦的哭泣一般，让人不由地联想到杰苏阿尔多的作品。
-</p>
-<p style="font-size:medium;text-align:-webkit-auto;orphans:2;widows:2;">
-    <br />
-</p>
-<p style="font-size:medium;text-align:-webkit-auto;orphans:2;widows:2;">
-    　　下面的视频是aquaria85在2011年7月上传到youtube的。视频内容是德勒斯登十字合唱团在2011年5月23日神圣周日中的演出。小男孩们将普塞尔的不和谐发挥到了极致。个人非常喜欢这个版本。当然，同时还是要推荐一些非常优秀的录音。Timothy Brown指挥剑桥大学克莱尔学院合唱团和Jeremy Summerly指挥Oxford Camerata这两个版本都非常赞。
-</p>
-<p style="font-family:宋体;">
-    <br />
-</p>
-<p style="font-family:宋体;text-align:center;">
-    <br />
-    <br />
-</p>
-<p style="font-family:宋体;">
-    <br />
-</p>
-<hr style="font-family:宋体;" />
-<p style="font-family:宋体;">
-    　　<span style="color:#3f3f3f;">点击左下角的<strong>阅读原文</strong>，欣赏</span><span style="font-size:medium;orphans:2;widows:2;"><span style="color:#3f3f3f;">克莱尔学院合唱团演唱的版本。不过如果想找</span><span style="color:#3f3f3f;">Oxford Camerata的版本，可能得自己去youtube上找咯～</span></span>
-</p>
-<hr style="font-family:宋体;" />
-<p style="font-family:宋体;text-align:center;">
-    <span style="font-size:14px;color:#595959;">人文爱乐合唱团</span><br />
-</p>
-<p style="font-family:宋体;">
-    <br />
-</p>
-<p>
-    <br />
-</p>
-<p>
-    <br />
-</p>
-        </div>
-        <div class="col-md-2"></div>
-
-      </div>
-
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-    </div> <!-- /container -->
-
-
-
+    <div class="rpc-page">
+      <h1>
+        power
+      </h1>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

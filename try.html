@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ,maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -14,39 +14,21 @@
 
     <!-- Custom styles for this template -->
     <style type="text/css">
-      body {
-          height: 100%;
-          width: 100%;
-          overflow: hidden;
-        }
-      #welcome{
+      body{
+      	overflow: hidden;
+      }
+      .rpc-page{
       	width: 100%;
       	height: 100%;
       }
       #welcome-image{
-      	position: absolute;
+      	position: relative;
       	margin-left: auto;
       	margin-right: auto;
       	top: 0px;
       	left: 0px;
       }
     </style>
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body onload="window.addEventListener('resize', getProperSize, false);">
-
-    <div id="welcome">
-       <img id="welcome-image" width = "600px" height="600px" src="images/web_welcome.png" onload="getProperSize();" />
-    </div>
     <script>
       function getProperSize(){
       	var height = window.innerHeight;
@@ -66,14 +48,43 @@
       	//alert(top);
 
       	var img = document.getElementById("welcome-image");
-
+        //alert("good1");
       	img.width = ans;
       	img.height = ans;
       	img.style.left = left + "px";
       	img.style.top = top + "px";
       	//alert("good2");
+
+        
+      	var pages = document.querySelectorAll(".rpc-page");
+      	for (var i = 0 ; i < pages.length ; i ++ ){
+//      		var t = pages[i];
+      		pages[i].style.height = height + "px";
+      		pages[i].style.width = width + "px";
+      	}
+      	//alert("good3 " + pages.length);
       }
     </script>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="window.addEventListener('resize', getProperSize, false);">
+
+    <div class="rpc-page" style="background-color:#f8f7f5">
+       <img id="welcome-image" width = "600px" height="600px" src="images/web_welcome_new.png" onload="getProperSize();" />
+    </div>
+    <div class="rpc-page">
+      <h1>
+        power
+      </h1>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
