@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, ,maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ,maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -17,9 +17,25 @@
       body{
       	overflow: hidden;
       }
+      .rpc-pages{
+      }
       .rpc-page{
+      	padding: 0 0 0 0;
+      	margin: 0 0 0 0;
       	width: 100%;
       	height: 100%;
+        display:inline-block;
+        *display:inline;zoom:1;
+        margin:0px;outline:none;
+        vertical-align: top;
+      }
+      .yellow-page{
+      	background-color: #f8f7f5;
+      }
+      .darkgray-page{
+      	background-color: #555;
+      	color: #f8f7f5;
+      	text-align: center;
       }
       #welcome-image{
       	position: relative;
@@ -77,14 +93,26 @@
 
   <body onload="window.addEventListener('resize', getProperSize, false);">
 
-    <div class="rpc-page" style="background-color:#f8f7f5">
+  <div class="rpc-pages">
+    <div class="rpc-page yellow-page">
        <img id="welcome-image" width = "600px" height="600px" src="images/web_welcome_new.png" onload="getProperSize();" />
     </div>
-    <div class="rpc-page">
-      <h1>
-        power
-      </h1>
+    <div class="rpc-page darkgray-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>menu</h3>
+          </div>
+          <div class="col-md-4">
+            <h3>contents</h3>
+          </div>
+          <div class="col-md-4">
+            <h3>about</h3>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>  
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
