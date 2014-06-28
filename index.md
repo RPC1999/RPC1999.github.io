@@ -1,7 +1,7 @@
 ---
 
 title: Hello, World!
-layout: post
+layout: default
 
 ---
 
