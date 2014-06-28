@@ -1,20 +1,45 @@
  
+
+          <!--高速版，加载速度快，使用前需测试页面的兼容性-->
+          <div id="SOHUCS"></div>
+          <script>
+            (function(){
+              var appid = 'cyrfbd8ex',
+              conf = 'prod_27aea26b6242cd53fef4a14ada3e7ece';
+              var doc = document,
+              s = doc.createElement('script'),
+              h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+              s.type = 'text/javascript';
+              s.charset = 'utf-8';
+              s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+              h.insertBefore(s,h.firstChild);
+              window.SCS_NO_IFRAME = true;
+            })()
+          </script>
+ 
         </div>
         <div class="col-md-3">
 
 
-          <h3>
-            <small>最近文章</small>
-          </h3>
+          <h4 style="font-size:16px;font-weight:bold;font-family: '微软雅黑','宋体';">
+            最近文章
+          </h4>
+          <style>
+            table a{
+              color: #666;
+            }
+            table a:hover{
+              color: #222;
+            }
+          </style>
           <table class="table">
             {% for post in site.posts limit: 5 %}
             <tr>
               <td><a href="{{ post.url }}">{{ post.title }}</a></td>
-              <td>{{ post.date | date: "%m-%d-%Y" }}</td> 
+              <td>{{ post.date | date: "%m-%d-%Y" }}</td>
             </tr>
             {% endfor %}
           </table>
-
         </div>
       </div>
     </div> <!-- /container -->

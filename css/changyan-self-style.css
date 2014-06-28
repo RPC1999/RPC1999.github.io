@@ -1,0 +1,207 @@
+/* 畅言自定义样式文件 */
+
+/* disable the "X人参与，X评论" */
+#article_info_sohu{
+	display: none;
+}
+
+/* disable the  gold information */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main #comment_sohu .head-gold-w{
+	display: none;
+}
+
+/* hide bottom bar */
+#bottombar-wrap-w{
+	display :none ;
+}
+
+
+/* "我来说两句 - 字色 "*/
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-title-w .join-wrap-w strong.wrap-name-b{
+color: #e5e5e5;
+}
+/* "X人参与，X评论" - 字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main #SOHU-comment-main .section-title-w .join-wrap-w span.wrap-join-b{
+color: #ffffff;
+display: none;
+}
+/* "X人参与，X评论" - 数字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-title-w .join-wrap-w span.wrap-join-w em.join-strong-bg{
+color:#ee542a;
+display: none;
+}
+
+/* 菜单 - 默认状态 - 用户名字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-title-w .user-wrap-w .wrap-name-b{
+color: #44708E;
+display: none;
+}
+
+
+/* ============================================================ */
+
+/* cbox - 输入框提示条 - 未输入评论内容 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .prompt-empty-b{
+background-color:#ffffff;
+color:#7f7f7f;
+}
+/* cbox - 输入框提示条 - 收到X条新回复 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-cbox-w .cbox-prompt-w a.prompt-reply-w{
+background-color:#e5e5e5;
+color:#555;
+}
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-cbox-w .cbox-prompt-w a.prompt-reply-w:hover{
+background-color:#757575;
+color:#555;
+}
+/* 还没有评论，快来抢沙发吧 - 背景色，字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .list-comment-empty-w .empty-prompt-w .prompt-null-b{
+background-color:#e5e5e5;
+color:#2e2e2e;
+}
+
+/* ============================================================ */
+
+/* 热门评论/最新评论 - 下边线 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .block-title-gw ul{
+border-bottom:1px solid #555;
+background-color:transparent;
+}
+/* 热门评论/最新评论 - 字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w strong.title-name-bg{
+color:#333;
+}
+
+/* 热门评论/最新评论 - font and size */
+#SOHUCS #SOHU_MAIN .section-list-w .block-title-gw ul li .title-name-gw
+{
+  font-size: 16px;
+  font-weight: bold;
+  font-family: '微软雅黑','宋体';
+}
+
+
+/* ============================================================ */
+
+/* 评论列表用户名链接颜色 */
+#SOHUCS #SOHU_MAIN a{
+color:#777;
+text-decoration:none;
+}
+#SOHUCS #SOHU_MAIN a:hover{
+color:#333;
+/*text-decoration:underline;*/
+}
+/* 列表 - 网友地址字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .user-address-gw{
+color:#b8b8b8;
+}
+/* 列表 - 发布时间字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .user-time-bg{
+color:#b8b8b8;
+}
+/* 来自... - 字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .action-from-bg{
+color:#b8b8b8;
+}
+
+/* ============================================================ */
+
+/* 回复，分享 - 默认链接色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .action-click-gw span a{
+color:#555;
+}
+/* 回复，分享 - hover链接色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .action-click-gw span a:hover{
+color:#555;
+}
+/* 顶，踩（数字） - 字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .action-click-gw span a em.icon-name-bg,
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .action-click-gw span a:hover em.icon-name-bg{
+color:#555;
+}
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .action-click-gw span a:hover em.icon-name-bg{
+text-decoration:underline;
+}
+
+
+
+/* ============================================================ */
+
+/* 翻页 文字色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-page-w .page-wrap-gw a,
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-page-w .page-wrap-w a{
+color:#333;
+}
+/* 翻页 hover边框色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-page-w .page-wrap-gw a:hover,
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-page-w .page-wrap-w a:hover{
+border:1px solid #444;
+}
+/* 翻页 当前色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-page-w .page-wrap-w a.wrap-current-e{
+color:#fff;
+font-weight:bold;
+background-color:#444;
+border:1px solid #444;
+}
+
+/* ============================================================ */
+
+/* 版权信息 - 链接色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-service-w .service-wrap-b a{
+color:#e5e5e5;
+}
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-service-w .service-wrap-b a:hover{
+color:#4f4f4f;
+}
+
+/* ============================================================ */
+
+/* 热门推荐链接色 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-newslist-w .conts-col li a{
+color:#5788AA;
+}
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-newslist-w .conts-col li a:hover{
+color:#EE542A;
+text-decoration:underline;
+}
+
+/* ============================================================ */
+
+/* 发布框收起状态按钮 图片尺寸90x42 */
+#SOHUCS #SOHU_MAIN .section-cbox-w .cbox-block-w .block-post-w .post-default-w .default-wrap-w .btn-fw{
+background-image:url("http://fmn.rrfmn.com/fmn059/20140628/0150/original_dtLX_19c500004258125f.jpg");
+background-color: #00ff00;
+background-position:0 0;
+}
+/* 主发布 - 按钮默认状态 图片尺寸90x42 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-cbox-w .issue-btn-w a .btn-bf{
+background-image:url("http://fmn.rrfmn.com/fmn059/20140628/0150/original_dtLX_19c500004258125f.jpg");
+background-position:0 0;
+}
+/* 主发布 - 按钮hover状态 图片尺寸90x42 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-cbox-w .issue-btn-w a:hover .btn-bf{
+background-image:url("http://fmn.rrfmn.com/fmn060/20140628/0205/original_jzoQ_699400003b4b1191.jpg");
+background-position:0 0;
+}
+/* 楼内回复发布 - 按钮默认状态 图片尺寸90x32 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .issue-btn-w a .btn-bf{
+background-image:url("http://fmn.rrfmn.com/fmn061/20140628/0235/original_f052_7002000033db125d.jpg");
+background-position:0 0;
+}
+/* 楼内回复发布 - 按钮hover状态 图片尺寸90x32 */
+#SOHUCS #SOHU_MAIN #SOHU-comment-main .section-list-w .issue-btn-w a:hover .btn-bf{
+background-image:url("http://fmn.rrfmn.com/fmn058/20140628/0235/original_o39C_6a5a00003bab1191.jpg");
+background-position:0 0;
+}
+/* 登录/游客登录窗口 - 确定按钮默认状态 图片尺寸78x33 */
+.user-login-wrapper-dw .cont-visitor-dw .cont-btn-dw a .btn-bdf,
+.visitor-login-wrapper-dw .cont-btn-dw a .btn-bdf{*/
+/*background-image:url("在此填入图片链接");*/
+}
+/* 登录/游客登录窗口 - 确定按钮hover状态 图片尺寸78x33 */
+.user-login-wrapper-dw .cont-visitor-dw .cont-btn-dw a:hover .btn-bdf,
+.visitor-login-wrapper-dw .cont-btn-dw a:hover .btn-bdf{
+/*background-image:url("在此填入图片链接");*/
+}
