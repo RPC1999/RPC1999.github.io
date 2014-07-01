@@ -8,7 +8,7 @@ layout: menu
 <h2>目录</h2>
 <br />
 
-<h4>
+<h4 style="text-align:center;">
 乐曲推荐
 </h4>
 
@@ -25,7 +25,19 @@ layout: menu
   </thead>
   <tr>
     <td>
-      Head my prayer
+      <a href="/Cloudburst.html">
+        Cloudburst
+      </a>
+    </td>
+    <td>
+      Eric Whitacre
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="/Hear-my-prayer.html">
+        Head my prayer
+      </a>
     </td>
     <td>
       Henry Purcell
@@ -33,11 +45,88 @@ layout: menu
   </tr>
   <tr>
     <td>
-      Canon in D
+      <a href="/Water-Night.html">
+        Water Night
+      </a>
     </td>
     <td>
-      dell
+      Eric Whitacre
     </td>
   </tr>
 </table>
 
+<h4 style="text-align:center;">
+好文推荐
+</h4>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>
+      标题
+    </th>
+    <th>
+      作者
+    </th>
+  </tr>
+  </thead>
+  <tr>
+    <td>
+      <a href="/对合唱团员的30个要求.html">
+        对合唱团员的30个要求
+      </a>
+    </td>
+    <td>
+      吴玲芬
+    </td>
+    
+  </tr>
+  <tr>
+    <td>
+      <a href="/Canon-in-D.html">
+        Canon in D
+      </a>
+    </td>
+    <td>
+      Pachelbel
+    </td>
+  </tr>
+</table>
+
+<h4 style="text-align:center;">
+团队介绍
+</h4>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>
+      名称
+    </th>
+    <th>
+      类型
+    </th>
+  </tr>
+  </thead>
+  <tr>
+    <td>
+      <a href="/北京爱乐合唱团.html">
+        北京爱乐合唱团
+      </a>
+    </td>
+    <td>
+      中国童声
+    </td>
+    
+  </tr>
+  <tr>
+    <td>
+      <a href="/Canon-in-D.html">
+        Canon in D
+      </a>
+    </td>
+    <td>
+      Pachelbel
+    </td>
+  </tr>
+</table>
