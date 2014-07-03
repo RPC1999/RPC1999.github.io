@@ -1,43 +1,10 @@
----
+﻿---
 
 title: 合唱的统一性要求
 layout: post
 permalink: /合唱的统一性要求
 
 ---
-
-<style>
-.rpc-player{
-  position: relative;
-  margin: 0px auto 0px auto;
-
-  display: block;
-  height: 100px;
-  width: 200px;
-
-  font: normal 14px "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  color: #333;
-  text-align: center;
-
-  background-color: #f5f5f5;
-  border: 1px solid #e5e5e5;
-}
-
-.rpc-player .inform{
-  font: normal 30px "Helvetica Neue", sans-serif;
-}
-
-.rpc-player .bottons{
-  font-size: 40px;
-  text-align: center;
-}
-
-.rpc-player audio{
-  display: none;
-}
-
-</style>
 
 <img width="100%" src="http://mmbiz.qpic.cn/mmbiz/OcEogMl0K3icN9rNQliaoMMVOMFNibw5S6FS75ejvvamicfmguLUweK0jtsbqiaX5xwdoD0CL8WlShX5fIKRas4A0Nw/0">
 
@@ -112,66 +79,9 @@ permalink: /合唱的统一性要求
         　　西方音乐史受东西罗马文化、天主教与东正教的影响，孕育出多种合唱风格，但一般都主张发挥各声部音色、音区上的特长，以丰富合唱的表现力。近年来情况变化了，总的倾向是“轻、柔、美、高”，即音量轻，音响柔和，音色美，共鸣位置高。采用积极的轻声作为基本力度，在表现需要时才偶用强声。用抒情性女高音的音色感觉作为统一的基础，其他声部与之靠拢，在取得共性的前提下发挥各声部的表现特长。这新的趋势使合唱音色亲切热情，声部之间融合，容易取得音准协和，高位置共鸣使低声部不再笨拙，整个合唱节奏鲜明、灵巧而富于变化，从而扩大了刻划音乐形象的能力，更便于深刻细腻地抒发感情。这体现了现代人审美标准的变化我们应该掌握这个动向，使合唱艺术更加科学化。</span><br />
     <br />
 </p>
-
-<div style="width:100%;height:200px;background-color:#555;vertical-align:middle;margin-left:auto;margin-right:auto;">
-    <audio style="width:300px;vertical-align:middle;margin-left:auto;margin-right:auto;"  controls>
-      <source src="http://mp3.hacked.cn/?down/13630.mp3">
-    </audio>
-    <br />
-  <button type="button" class="btn btn-default">Default button</button>
-
-</div>
-
-<div class="rpc-player" state="not">
-  <div class="bottons">
-    <span class="glyphicon glyphicon-play"></span>
-    <span class="glyphicon glyphicon-pause" style="display:none"></span>
-  </div>
-  
-  <div class="inform">Not Load</div>
-  <audio class="rpc-vedio" controls preload="none">
-    <source src="http://mp3.hacked.cn/?down/13630.mp3">
-  </audio>
-</div>
-
 <hr />
 <p style="text-align:center;">
     <span style="font-size:14px;color:#3f3f3f;">人文爱乐合唱团</span><br />
     <br />
     <br />
 </p>
-
-<script >
-  $(".rpc-player").click(function(){
-    var state = $(this).attr("state");
-    var btn_play = $(this).find(".glyphicon-play:first");
-    var btn_pause = $(this).find(".glyphicon-pause:first");
-    var vedio = $(this).find(".rpc-vedio:first");
-    if ( state.match("not") ){
-      vedio.trigger('load');
-      vedio.trigger('play');
-      $(this).attr("state","playing");
-      btn_play.hide();
-      btn_pause.show();
-      //alert( botton.attr("class") );
-    }else if ( state.match("playing") ){
-      vedio.trigger('pause');
-      $(this).attr("state","pause");
-      btn_play.show();
-      btn_pause.hide();
-    }else if ( state.match("pause") ){
-      vedio.trigger('play');
-      $(this).attr("state","playing");
-      btn_play.hide();
-      btn_pause.show();
-    }
-    else {
-      inform.html("error");
-    }
-  });
-  $(".rpc-player .rpc-vedio:first").bind("load",function(){
-    $(".alert-success").html("Audio Loaded succesfully");
-    $(this).parent().find(".inform:first").html("Loaded")
-    //alert("loaded");
-  });
-</script>

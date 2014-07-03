@@ -1,0 +1,61 @@
+.rpc-player{
+  position: relative;
+  margin: 0px auto 0px auto;
+
+  display: block;
+  height: 100px;
+  width: 200px;
+
+  font: normal 14px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+}
+
+.rpc-player .inform{
+  position: relative;
+  top: -5px;
+
+  font: bold 16px "Helvetica Neue", sans-serif;
+}
+
+.rpc-player .bottons{
+  position: relative;
+  top: 5px;
+
+  font-size: 40px;
+  text-align: center;
+}
+
+.rpc-player audio{
+  display: none;
+}
+
+.rpc-player .progress{
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 6px;
+  margin-bottom: 0px;
+
+  height: 12px;
+  width: 190px;
+
+  border: 0px; 
+}
+
+.rpc-player .bottons .glyphicon-pause{
+  display: none;
+}
+.rpc-player .bottons .glyphicon-repeat{
+  display: none;
+}
+
+.rpc-player .progress .progress-bar{
+  width: 100%;
+
+  background-color: #333;
+}

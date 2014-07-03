@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+    
 
+
+    <link href="/css/rpc-player.min.css" rel="stylesheet" href="data:text/css;charset=utf-8,">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
     <title>Cloudburst</title>
 
     
 <!-- bootstrap_import_css begin -->
 
     <!-- Bootstrap core CSS -->
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" href="data:text/css;charset=utf-8,">
     <!--<link href="/css/bootstrap.css" rel="stylesheet"> -->
 
 <!-- bootstrap_import_css end -->
 
+    
 
 
   </head>
@@ -196,12 +202,30 @@
 <p style="font-family:宋体;font-size:16px;">
     <span style="font-size:14px;color:#595959;">(Adapted by Eric Whitacre, Translation by Lysander Kemp)</span>
 </p>
+<div class="rpc-player" state="not">
+  <div class="bottons">
+    <span class="glyphicon glyphicon-play"></span>
+    <span class="glyphicon glyphicon-pause"></span>
+  </div>
+
+  <div class="inform">Click to Play</div>
+  <div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div>
+
+  <audio class="rpc-video" controls preload="none">
+    <source src="http://mp3.hacked.cn/?down/13630.mp3">
+  </audio>
+  
+</div>
 <p style="font-family:宋体;font-size:16px;">
     <span style="color:#595959;"><span style="font-size:14px;"></span></span><br />
 </p>
 <p style="font-family:宋体;font-size:16px;">
     <br />
 </p>
+
+
+
+
 <hr style="font-family:宋体;font-size:16px;" />
 <p style="font-family:宋体;font-size:16px;">
     <span style="color:#7f7f7f;">　　<strong><a href="http://t.cn/RvZGEdc" style="color:#7f7f7f;">点击这里</a></strong>可以聆听由Polyphony演唱的《Cloudburst》。这是《Eric Whitacre: Cloudburst and Other Choral Works》这张专辑的第7首作品。</span><br />
@@ -287,9 +311,9 @@
       </div>
     </div> <!-- /container -->
 
+    <script src="/js/rpc-player.js"></script>
 
 <!-- bootstrap_footer_common begin -->
-
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <!--<script src="/js/jquery.min.js"></script>-->

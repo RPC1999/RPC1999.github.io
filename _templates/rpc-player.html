@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ,maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>人文爱乐合唱团</title>
+
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+<style>
+.rpc-player{
+  position: relative;
+  margin: 0px auto 0px auto;
+
+  display: block;
+  height: 100px;
+  width: 200px;
+
+  font: normal 14px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+}
+
+.rpc-player .inform{
+  position: relative;
+  top: -5px;
+
+  font: bold 16px "Helvetica Neue", sans-serif;
+}
+
+.rpc-player .bottons{
+  position: relative;
+  top: 5px;
+
+  font-size: 40px;
+  text-align: center;
+}
+
+.rpc-player audio{
+  display: none;
+}
+
+.rpc-player .progress{
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 6px;
+  margin-bottom: 0px;
+
+  height: 12px;
+  width: 190px;
+
+  border: 0px; 
+}
+
+.rpc-player .bottons .glyphicon-pause{
+  display: none;
+}
+.rpc-player .bottons .glyphicon-repeat{
+  display: none;
+}
+
+.rpc-player .progress .progress-bar{
+  width: 100%;
+
+  background-color: #333;
+}
+
+</style>
+
+<div class="inform">
+  hello!
+</div>
+
+<div class="rpc-player" state="not">
+  <div class="bottons">
+    <span class="glyphicon glyphicon-play"></span>
+    <span class="glyphicon glyphicon-pause" ></span>
+    <div class="glyphicon glyphicon-repeat" ></div>
+  </div>
+
+  <div class="inform">Click to Play</div>
+  <div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div></div>
+
+  <audio class="rpc-video" controls preload="none">
+    <source src="http://mp3.hacked.cn/?down/13630.mp3">
+  </audio>
+</div>
+
+<div class="rpc-player" state="not">
+  <div class="bottons">
+    <span class="glyphicon glyphicon-play"></span>
+    <span class="glyphicon glyphicon-pause"></span>
+  </div>
+
+  <div class="inform">Click to Play</div>
+  <div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div>
+
+  <audio class="rpc-video" controls preload="none">
+    <source src="http://mp3.hacked.cn/?down/13630.mp3">
+  </audio>
+  
+</div>
+
+
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+<script >
+$(".rpc-player").click(function(){
+  var state = $(this).attr("state");
+  var inform = $(this).find(".inform:first");
+  var btn_play = $(this).find(".glyphicon-play:first");
+  var btn_pause = $(this).find(".glyphicon-pause:first");
+  var video = $(this).find(".rpc-video:first");
+  var progress = $(this).find("progress-bar");
+  if ( state.match("not") ){
+
+    video.bind('loadeddata',function(){
+
+      $(".alert-success").html("Audio Loaded succesfully");
+      $(this).parent().find(".inform:first").html("Loaded");
+
+      var track_length = $(this).prop('duration');
+      var ttMins = parseInt(track_length/60);
+      var ttSecs = parseInt(track_length - (ttMins  * 60));
+
+      $(this).attr('track_length', track_length);
+      $(this).attr('ttMins', ttMins);
+      $(this).attr('ttSecs', ttSecs);
+
+    });
+    video.trigger('load');
+    video.trigger('play');
+    $(this).attr("state","playing");
+
+    btn_play.hide();
+    btn_pause.show();
+
+    $(video).bind('timeupdate',function(){
+
+      var track_length = $(this).attr('track_length');
+      var ttMins = $(this).attr('ttMins');
+      var ttSecs = $(this).attr('ttSecs');
+
+      var secs = $.prop(this, 'currentTime');
+
+      var tcMins = parseInt(secs/60);
+      var tcSecs = parseInt(secs - (tcMins * 60));
+
+
+      var cur = tcMins + ":" + tcSecs;
+      var tot = ttMins + ":" + ttSecs;
+      $(this).parent().find(".inform").html(cur + "/" + tot);
+
+      var per = ( secs / track_length ) * 100 ;
+      var pro = $(this).parent().find(".progress-bar");
+      pro.attr('aria-valuenow', per);
+      pro.css('width',per + "%");
+
+    });
+    //alert( botton.attr("class") );
+  }else if ( state.match("playing") ){
+    video.trigger('pause');
+    $(this).attr("state","pause");
+    btn_play.show();
+    btn_pause.hide();
+
+    //var t = $(this).find(".rpc-video")[0].duration;
+    //var l = $(".rpc-video")[0].duration;
+
+    //alert("1");
+
+  }else if ( state.match("pause") ){
+    video.trigger('play');
+    $(this).attr("state","playing");
+    btn_play.hide();
+    btn_pause.show();
+  }
+  else {
+    inform.html("error");
+  }
+});
+
+
+</script>
+
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!--<script src="/js/jquery.min.js"></script>-->
+    <!--<script src="/js/bootstrap.min.js"></script>-->
+  </body>
+</html>
+
+<!-- index.html end -->
